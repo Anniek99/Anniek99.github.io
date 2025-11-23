@@ -2,88 +2,258 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Annie's Hands-on Project Portfolio</title>
+  <title>Annie Katz's Hands-On Engineering Portfolio</title>
   <style>
     body {
-      font-family: Georgia, "Times New Roman", serif;
-      background-color: #d8f5b6;
+      font-family: "Inter", "Segoe UI", Arial, sans-serif;
+      background: linear-gradient(135deg, #e6f7ff, #e8fff5);
       margin: 0;
+      color: #0f172a;
     }
+
     .page {
-      max-width: 900px;
+      max-width: 920px;
       margin: 0 auto;
-      background-color: #fff7d9;
-      padding: 40px 60px 60px;
+      background-color: #ffffff;
+      padding: 48px 64px 64px;
       min-height: 100vh;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.05);
     }
-    h1 { font-size: 2.4rem; margin-bottom: 0.2rem; }
-    h2 { margin-top: 2.5rem; }
-    h3 { margin-top: 1.8rem; }
+
+    h1 {
+      font-size: 2.6rem;
+      margin-bottom: 0.2rem;
+      color: #0f4c81;
+    }
+
+    h2 {
+      margin-top: 3rem;
+      font-size: 1.8rem;
+      color: #0c6b8f;
+      border-left: 6px solid #7dd3fc;
+      padding-left: 12px;
+    }
+
+    h3 {
+      margin-top: 1.2rem;
+      color: #083d5a;
+    }
+
     .nav {
       text-align: right;
       font-size: 0.9rem;
+      color: #64748b;
+      margin-bottom: 10px;
     }
+
     .intro {
       margin-top: 1.5rem;
-      line-height: 1.5;
+      line-height: 1.6;
+      font-size: 1.05rem;
     }
+
     .project {
       display: flex;
       flex-wrap: wrap;
-      margin-top: 1.5rem;
-      gap: 16px;
+      gap: 22px;
+      margin-top: 2rem;
+      background: #f8fbff;
+      padding: 20px;
+      border-radius: 16px;
+      border: 1px solid #e2f3ff;
     }
+
     .project img {
-      max-width: 260px;
-      border-radius: 4px;
+      width: 260px;
+      height: auto;
+      border-radius: 12px;
+      border: 3px solid #bae6fd;
     }
+
     .project-text {
       flex: 1;
       min-width: 260px;
-      line-height: 1.5;
+      line-height: 1.6;
     }
-    .caption {
-      font-size: 0.85rem;
-      color: #555;
-      margin-top: 4px;
+
+    .tag {
+      display: inline-block;
+      background: #e0f2fe;
+      color: #0369a1;
+      font-size: 0.8rem;
+      font-weight: 600;
+      padding: 4px 10px;
+      border-radius: 999px;
+      margin-bottom: 6px;
+      margin-right: 6px;
     }
+
     @media (max-width: 700px) {
-      .page { padding: 24px 16px 40px; }
+      .page { padding: 28px 18px 40px; }
+      .project img { width: 100%; }
     }
   </style>
 </head>
+
 <body>
   <div class="page">
-    <div class="nav">Home</div>
-    <h1>Annie's Hands-on Project Portfolio</h1>
+    <div class="nav">RSI Project Portfolio</div>
 
-    <h2>Intro</h2>
+    <h1>Annie Katz's Hands-On Engineering Portfolio</h1>
+
+    <h2>About</h2>
     <p class="intro">
-      This page is a collection of my hands-on projects. 
+      This portfolio documents my hands-on work in biomedical engineering. My projects come from
+      real problems experienced by my family, friends, and myself. I like to build practical,
+      human-centered devices that combine hardware, sensors, and software to solve real medical challenges.
     </p>
 
-    <h2>Projects</h2>
+    <h2>Individual Projects</h2>
 
+    <!-- GI Tracked -->
     <div class="project">
-      <img src="images/project1.jpg" alt="Project 1 photo">
+      <img src="images/gi-tracked.jpg" alt="GI Tracked project">
       <div class="project-text">
-        <h3>Project Name #1</h3>
+        <span class="tag">Biosignals</span>
+        <span class="tag">Wearables</span>
+        <span class="tag">Sensors</span>
+
+        <h3>GI Tracked — Wearable Gut-Monitoring System</h3>
         <p>
-          • Problem / idea: what I was trying to do.<br>
-          • What you built: main parts, tools, and tech I used.<br>
-          • Biggest challenge: what went wrong at first.<br>
-          • What you learned: skill, concept, or mindset.
+          <b>Problem:</b> (Write about disrupted gut rhythms and why continuous gut monitoring matters)<br>
+          <b>What I built:</b> (Sensor array, wearable housing, data logging methods)<br>
+          <b>Challenges:</b> (Noise filtering, placement, comfort during long wear)<br>
+          <b>Impact:</b> (How this could help early detection / awareness)
         </p>
       </div>
     </div>
 
+    <!-- At-home Ultrasound -->
     <div class="project">
-      <img src="images/project2.jpg" alt="Project 2 photo">
+      <img src="images/ultrasound.jpg" alt="Home ultrasound project">
       <div class="project-text">
-        <h3>Project Name #2</h3>
+        <span class="tag">Imaging</span>
+        <span class="tag">Rehabilitation</span>
+
+        <h3>At-Home Muscle Ultrasound System</h3>
         <p>
-          Same structure: problem → build → challenge → learning.
-          link to extra videos or GitHub repos if needed.
+          <b>Problem:</b> Retore hamstring due to lack of imaging feedback during recovery<br>
+          <b>What I built:</b> Low-cost imaging setup to visualize muscle recovery<br>
+          <b>Challenges:</b> Image clarity, sensor alignment<br>
+          <b>Impact:</b> Faster, safer at-home rehab
         </p>
       </div>
     </div>
+
+    <!-- Scandage -->
+    <div class="project">
+      <img src="images/scandage.jpg" alt="Scandage project">
+      <div class="project-text">
+        <span class="tag">Diagnostics</span>
+        <span class="tag">AI-assisted</span>
+
+        <h3>Scandage — Smart Diagnostic Tool</h3>
+        <p>
+          <b>Problem:</b> (Explain diagnostic delay issue)<br>
+          <b>What I built:</b> (Sensor + classification system)<br>
+          <b>Challenges:</b> (Calibration, data reliability)<br>
+          <b>Impact:</b> Faster home-based screening
+        </p>
+      </div>
+    </div>
+
+    <h2>Family-Driven Engineering Projects</h2>
+
+    <!-- Grip Hero -->
+    <div class="project">
+      <img src="images/griphero.jpg" alt="Grip Hero">
+      <div class="project-text">
+        <span class="tag">Rehabilitation</span>
+        <span class="tag">Motor Control</span>
+
+        <h3>Grip Hero (v1)</h3>
+        <p>
+          <b>Problem:</b> Sister with dyspraxia needed engaging hand-strength training<br>
+          <b>What I built:</b> Game-based grip trainer with force sensors<br>
+          <b>Challenges:</b> Calibration and responsiveness<br>
+          <b>Impact:</b> Fun, adaptive motor therapy
+        </p>
+      </div>
+    </div>
+
+    <!-- Gripster -->
+    <div class="project">
+      <img src="images/gripster.jpg" alt="Gripster">
+      <div class="project-text">
+        <span class="tag">Iteration</span>
+        <span class="tag">Human-centered design</span>
+
+        <h3>Gripster (v2)</h3>
+        <p>
+          <b>Improvement Focus:</b> Better ergonomics, lighter device, smarter feedback<br>
+          <b>What changed:</b> Sensor positioning + wireless connectivity<br>
+          <b>Learning:</b> Iterative design in medical hardware
+        </p>
+      </div>
+    </div>
+
+    <!-- Misophonia -->
+    <div class="project">
+      <img src="images/misophonia.jpg" alt="Misophonia device">
+      <div class="project-text">
+        <span class="tag">Neurotech</span>
+        <span class="tag">Sensory processing</span>
+
+        <h3>Misophonia Sensory Aid (Work in Progress)</h3>
+        <p>
+          <b>Problem:</b> Younger brother’s sound sensitivity<br>
+          <b>What I’m building:</b> Wearable sound-filtering prototype<br>
+          <b>Status:</b> Active development
+        </p>
+      </div>
+    </div>
+
+    <h2>Team Projects</h2>
+
+    <!-- HeadHush -->
+    <div class="project">
+      <img src="images/headhush.jpg" alt="HeadHush project">
+      <div class="project-text">
+        <span class="tag">Wearable therapy</span>
+        <span class="tag">Team project</span>
+
+        <h3>HeadHush — Smart Therapy Beanie</h3>
+        <p>
+          <b>Problem:</b> Discreet headache relief without medication<br>
+          <b>My role:</b> Conductive textiles, sensors, and documentation<br>
+          <b>System:</b> Heat + vibration + mobile control
+        </p>
+      </div>
+    </div>
+
+    <!-- Pressure Cast -->
+    <div class="project">
+      <img src="images/pressurecast.jpg" alt="Pressure cast project">
+      <div class="project-text">
+        <span class="tag">Medical safety</span>
+        <span class="tag">Team project</span>
+
+        <h3>Pressure-Sensing Cast (Work in Progress)</h3>
+        <p>
+          <b>Problem:</b> Pressure sores under casts go undetected<br>
+          <b>My role:</b> Sensor placement strategy + prototyping<br>
+          <b>Status:</b> Active development
+        </p>
+      </div>
+    </div>
+
+    <h2>What I Want to Build Next</h2>
+    <p class="intro">
+      I am especially interested in developing wearable medical devices, real-time biosignal
+      monitoring systems, and human-centered rehabilitation technology. I want to continue
+      combining hardware, software, and biology through research-driven engineering.
+    </p>
+
+  </div>
+</body>
+</html>
