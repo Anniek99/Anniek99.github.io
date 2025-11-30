@@ -12,7 +12,6 @@
       color: #0f172a;
     }
 
-    /* Remove container max-width. Full-page layout. */
     .section {
       width: 100%;
       max-width: 1100px;
@@ -20,15 +19,18 @@
       padding: 40px 24px;
     }
 
+    h1, h2, h3 {
+      text-align: center;
+      margin-bottom: 1.2rem;
+    }
+
     h1 {
       font-size: 3rem;
       color: #0f4c81;
-      text-align: center;
-      margin-bottom: 1rem;
     }
 
     h2 {
-      font-size: 2.1rem;
+      font-size: 2.3rem;
       color: #0c6b8f;
       margin-top: 4rem;
       border-left: 6px solid #7dd3fc;
@@ -36,61 +38,30 @@
     }
 
     h3 {
-      font-size: 1.8rem;
-      margin-top: 1rem;
+      font-size: 1.9rem;
       color: #083d5a;
+      margin-top: 2rem;
     }
 
-    .intro {
-      font-size: 1.2rem;
-      max-width: 850px;
-      margin: 0 auto;
-      line-height: 1.8;
-      text-align: center;
-      margin-bottom: 40px;
-    }
-
-    /* FULLSCREEN PROJECT IMAGES */
-    .project img,
-    .project video {
-      width: 100%;
-      height: auto;
-      border-radius: 18px;
-      border: 4px solid #bce7ff;
-      margin: 0 auto;
-      display: block;
-    }
-
-    .project {
-      margin-top: 4rem;
-    }
-
-    .project p {
+    p {
       font-size: 1.25rem;
       line-height: 1.75;
-      margin-top: 18px;
       max-width: 900px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-
-    .tags {
-      margin-top: 12px;
-      margin-bottom: 14px;
+      margin: 0 auto 30px;
       text-align: center;
     }
 
-    .tag {
-      display: inline-block;
-      background: #e0f2fe;
-      color: #0369a1;
-      font-size: 0.95rem;
-      font-weight: 600;
-      padding: 6px 14px;
-      border-radius: 999px;
-      margin: 4px 6px;
+    .project img,
+    .project video,
+    iframe {
+      width: 100%;
+      max-width: 1000px;
+      height: auto;
+      display: block;
+      margin: 20px auto;
+      border-radius: 18px;
+      border: 4px solid #bce7ff;
     }
-
   </style>
 </head>
 
@@ -98,13 +69,13 @@
 
   <div class="section">
     <h1>Annie Katz — Hands-On Engineering Portfolio</h1>
-
-    <p class="intro">
+    <p>
       I build biomedical engineering devices inspired by real problems my family, friends,
       and I experience. My projects combine sensors, wearables, mechanical design,
       and embedded systems to help people move, heal, and sense their bodies better.
     </p>
   </div>
+
 
   <!-- ===================== -->
   <!-- INDIVIDUAL PROJECTS   -->
@@ -112,67 +83,70 @@
 
   <div class="section">
     <h2>Individual Projects</h2>
-  </div>
 
-<!-- GI TRACKED -->
-<div class="project">
 
-    <h3 style="text-align:center;">GI Tracked — Wearable Gut Rhythm Monitoring System</h3>
-
+    <!-- GI TRACKED -->
+    <h3>GI Tracked — Wearable Gut Rhythm Monitoring System</h3>
+    <p>
+      A reusable abdominal band that records gut sounds and temperature overnight using
+      contact microphones, an NTC thermistor, and a QT Py ESP32-S3.  
+      Built to study digestive rhythms, sleep patterns, and circadian alignment at home.
+    </p>
     <img src="images/GITracked.png" alt="GI Tracked system">
 
-    <div class="tags">
-      <span class="tag">Wearables</span>
-      <span class="tag">Biosignals</span>
-      <span class="tag">Sensors</span>
-    </div>
+    <!-- Add demo videos if you want in the future -->
+    <!-- <iframe src="YOUTUBE_LINK" frameborder="0" allowfullscreen></iframe> -->
 
+
+
+    <!-- ULTRASOUND PROJECT -->
+    <h3>At-Home Muscle Ultrasound System</h3>
     <p>
-      <b>Problem:</b> No tool exists to track gut motility during daily life, despite its importance in health.<br><br>
-      <b>Build:</b> A multi-sensor abdominal band with contact microphones + thermistors and an ESP32-S3 logger.<br><br>
-      <b>Challenges:</b> Motion noise, placement reproducibility, long-wear comfort.<br><br>
-      <b>Impact:</b> Potential for early detection of gut dysregulation and circadian rhythm misalignment.
+      After re-tearing my hamstring by returning to hockey too early, I built a
+      low-cost ultrasound prototype to visualize tendon and muscle healing between clinic visits.
     </p>
 
-</div>
+    <!-- VIDEO #1: Your 3M submission (YouTube embed) -->
+    <iframe
+      src="https://www.youtube.com/embed/VIDEO_ID_HERE"
+      frameborder="0"
+      allowfullscreen>
+    </iframe>
+
+    <!-- VIDEO #2: Improving Lives Award submission -->
+    <iframe
+      src="https://www.youtube.com/embed/VIDEO_ID_HERE"
+      frameborder="0"
+      allowfullscreen>
+    </iframe>
+
+    <!-- VIDEO #3: Ultrasound demo -->
+    <iframe
+      src="https://www.youtube.com/embed/VIDEO_ID_HERE"
+      frameborder="0"
+      allowfullscreen>
+    </iframe>
 
 
-  <!-- ULTRASOUND -->
-  <div class="project">
-    <img src="images/ultrasound.jpg" alt="Ultrasound prototype">
 
-    <div class="tags">
-      <span class="tag">Imaging</span>
-      <span class="tag">Rehabilitation</span>
-    </div>
-
-    <h3 style="text-align:center;">At-Home Muscle Ultrasound</h3>
-
+    <!-- SCANDAGE -->
+    <h3>Scandage — Home Diagnostic Screener</h3>
     <p>
-      <b>Problem:</b> I re-tore my hamstring because I couldn’t monitor healing between clinic visits.<br><br>
-      <b>Build:</b> Low-cost ultrasound probe + image-processing pipeline to view muscle recovery.<br><br>
-      <b>Impact:</b> Could help young athletes avoid reinjury.
+      A sensor + software prototype that performs early screening to reduce diagnostic delays.
+      Designed to give families a way to identify concerning patterns before symptoms escalate.
     </p>
+    <img src="images/Scandage.png" alt="Scandage system">
+
+    <!-- Scandage demo video -->
+    <iframe
+      src="https://www.youtube.com/embed/VIDEO_ID_HERE"
+      frameborder="0"
+      allowfullscreen>
+    </iframe>
+
+
   </div>
 
-
-
-  <!-- SCANDAGE -->
-  <div class="project">
-    <img src="images/scandage.jpg" alt="Scandage">
-
-    <div class="tags">
-      <span class="tag">Diagnostics</span>
-      <span class="tag">AI-assisted</span>
-    </div>
-
-    <h3 style="text-align:center;">Scandage — Home Diagnostic Screener</h3>
-
-    <p>
-      <b>Build:</b> Sensor + early ML classification prototype.<br>
-      <b>Goal:</b> Reduce diagnostic delays via home-based pre-screening tools.
-    </p>
-  </div>
 
 
   <!-- ===================== -->
@@ -181,60 +155,44 @@
 
   <div class="section">
     <h2>Family-Driven Engineering Projects</h2>
-  </div>
 
-  <!-- GRIP HERO -->
-  <div class="project">
+
+    <!-- GRIP HERO -->
+    <h3>Grip Hero (v1)</h3>
+    <p>
+      A load-cell based hand-strength trainer created for my sister with dyspraxia.
+      This version taught me how mechanical friction destroys sensor accuracy.
+    </p>
     <img src="images/griphero.jpg" alt="Grip Hero v1">
 
-    <div class="tags">
-      <span class="tag">Rehabilitation</span>
-      <span class="tag">Motor Control</span>
-    </div>
 
-    <h3 style="text-align:center;">Grip Hero (v1)</h3>
-
+    <!-- GRIPSTER V2 -->
+    <h3>Gripster (v2)</h3>
     <p>
-      <b>Problem:</b> My sister with dyspraxia struggled with existing grip tools.<br><br>
-      <b>Build:</b> Load-cell based trainer with simple visual biofeedback.<br><br>
-      <b>Learning:</b> First realization that mechanical friction ruins sensor accuracy.
+      Full mechanical redesign: smoother rails, ergonomic handle, reduced friction,
+      stable force readings, and motivating visual feedback.
     </p>
+
+    <img src="images/gripster-demo.gif" alt="Gripster demo">
+
+    <!-- Gripster demo -->
+    <iframe
+      src="https://www.youtube.com/embed/VIDEO_ID_HERE"
+      frameborder="0"
+      allowfullscreen>
+    </iframe>
+
+
+    <!-- MISOPHONIA -->
+    <h3>Misophonia Sensory Aid (Work in Progress)</h3>
+    <p>
+      A wearable sound-filtering device to help my younger brother manage sensitivity
+      to sudden triggering frequencies.
+    </p>
+    <img src="images/misophonia.jpg" alt="Misophonia prototype">
+
   </div>
 
-  <!-- GRIPSTER V2 -->
-  <div class="project">
-    <img src="images/gripster-demo.gif" alt="Gripster GIF">
-
-    <div class="tags">
-      <span class="tag">Iteration</span>
-      <span class="tag">Human-centered design</span>
-    </div>
-
-    <h3 style="text-align:center;">Gripster (v2)</h3>
-
-    <p>
-      <b>Focus:</b> Smoother rails, ergonomic handle, clearer force feedback.<br><br>
-      <b>Goal:</b> Make therapy intuitive + motivating for young users.<br><br>
-      <b>Result:</b> Reliable, low-friction motion and stable load cell data.
-    </p>
-  </div>
-
-  <!-- MISOPHONIA -->
-  <div class="project">
-    <img src="images/misophonia.jpg" alt="Misophonia WIP">
-
-    <div class="tags">
-      <span class="tag">Neurotech</span>
-      <span class="tag">Sensory Processing</span>
-    </div>
-
-    <h3 style="text-align:center;">Misophonia Sensory Aid (WIP)</h3>
-
-    <p>
-      <b>Problem:</b> My brother is sensitive to sudden sounds.<br><br>
-      <b>Build:</b> Wearable device exploring frequency-based trigger suppression.
-    </p>
-  </div>
 
 
   <!-- ===================== -->
@@ -243,41 +201,43 @@
 
   <div class="section">
     <h2>Team Projects</h2>
-  </div>
 
-  <!-- HEADHUSH -->
-  <div class="project">
-    <img src="images/headhush.jpg" alt="HeadHush">
-
-    <div class="tags">
-      <span class="tag">Wearables</span>
-      <span class="tag">Team Project</span>
-    </div>
-
-    <h3 style="text-align:center;">HeadHush — Smart Therapy Beanie</h3>
-
+    <h3>HeadHush — Smart Therapy Beanie</h3>
     <p>
-      <b>Role:</b> Conductive textile layer + sensor integration.<br><br>
-      <b>System:</b> Heat, vibration, and mobile control.
+      I built the conductive textile layer and integrated heat/vibration modules into this
+      migraine-relief beanie controlled through a mobile interface.
     </p>
-  </div>
+    <img src="images/headhush.jpg" alt="HeadHush beanie">
 
-  <!-- PRESSURE CAST -->
-  <div class="project">
-    <img src="images/pressurecast.jpg" alt="Pressure Cast">
-
-    <div class="tags">
-      <span class="tag">Medical Safety</span>
-      <span class="tag">Team Project</span>
-    </div>
-
-    <h3 style="text-align:center;">Pressure-Sensing Cast (WIP)</h3>
-
+    <h3>Pressure-Sensing Cast (Work in Progress)</h3>
     <p>
-      <b>Goal:</b> Detect pressure sores early.<br><br>
-      <b>Contribution:</b> Sensor placement + internal foam-layer design.
+      Designed a cast liner with embedded pressure sensors to detect pressure sores early—
+      especially important because both my brothers ended up in casts this year.
     </p>
+    <img src="images/pressurecast.jpg" alt="Pressure cast prototype">
+
   </div>
+
+
+
+  <!-- ===================== -->
+  <!-- MISCELLANEOUS VIDEOS  -->
+  <!-- ===================== -->
+
+</div>
+
+<div class="section">
+  <h2>Miscellaneous</h2>
+
+  <h3>Junior Breakthrough Challenge Submission</h3>
+
+  <iframe
+    src="https://www.youtube.com/embed/VIDEO_ID_HERE"
+    frameborder="0"
+    allowfullscreen>
+  </iframe>
+
+</div>
 
 
 </body>
