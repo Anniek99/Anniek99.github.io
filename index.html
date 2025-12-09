@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Annie Katz — Engineering Portfolio</title>
+  <title>Annie Katz - Biomedical Engineering Portfolio</title>
 
   <style>
     body {
@@ -34,38 +34,47 @@
       text-align: center;
     }
 
-    p {
-      font-size: 1.2rem;
+    h3 {
       text-align: center;
-      margin-bottom: 20px;
+      font-size: 1.4rem;
+      color: #0f4c81;
+      margin-top: 25px;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 1.15rem;
+      text-align: center;
+      margin-bottom: 18px;
     }
 
     img {
-      width: 90%;
-      max-width: 800px;
+      width: 80%;
+      max-width: 700px;
       display: block;
-      margin: 20px auto;
-      border-radius: 16px;
+      margin: 18px auto;
+      border-radius: 14px;
       border: 3px solid #cfe9ff;
     }
 
     iframe {
-      width: 90%;
+      width: 85%;
       max-width: 800px;
-      height: 450px;
+      height: 430px;
       display: block;
       margin: 20px auto;
       border-radius: 12px;
       border: 2px solid #cfe9ff;
     }
 
-    h3 {
+    .roman {
       text-align: center;
-      font-size: 1.4rem;
-      color: #0f4c81;
-      margin-top: 30px;
-      margin-bottom: 10px;
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin-top: 60px;
+      color: #0a3d62;
     }
+
   </style>
 </head>
 
@@ -73,24 +82,115 @@
 
 <div class="section">
 
-  <h1>Annie Katz's Hands-On Engineering Portfolio</h1>
+  <h1>Annie Katz — Biomedical Engineering Portfolio</h1>
 
   <p>
-    I have been the lead engineer on all projects included in this portfolio. I engineer projects in healthcare, primarily based on real issues my family,
-    friends, or I have experienced. 
+    I design biomedical devices inspired by real needs experienced by my family, classmates, and myself.
+    I independently lead engineering projects that integrate sensors, embedded systems, and hardware to
+    support rehabilitation, diagnostics, and sensory health.
   </p>
 
-  <!-- =============== -->
-  <!-- 1. Grip Hero -->
-  <!-- =============== -->
+  <!-- ======================================================= -->
+  <!-- I. GI TRACKED -->
+  <!-- ======================================================= -->
 
-  <h2>Grip Hero (v1)</h2>
+  <div class="roman">I. GI Tracked - Wearable Gut Rhythm Monitoring</div>
 
-  <p>
-    A load-cell hand-strength trainer I built for my sister with dyspraxia when she struggled
-    with existing therapy tools. This was my first experience designing a mechanical + sensing
-    system, and it taught me how friction affects accuracy.
-  </p>
+  <p><b>Role:</b> Lead Engineer (Independent Project)</p>
+
+  <p><b>1) Problem / Motivation:</b> There is no accessible way to monitor gut motility during daily life,
+     even though irregular gut rhythms are linked to digestive disease and disrupted circadian timing.</p>
+
+  <p><b>2) What I Built:</b> A reusable abdominal band with three contact microphones and a thermistor connected 
+     to an ESP32-S3 for overnight biosignal logging.</p>
+
+  <p><b>3) Technical Challenges:</b> Motion noise during sleep, reproducible sensor placement, and long-wear comfort.</p>
+
+  <p><b>4) Intended Impact:</b> Enables early detection of abnormal gut rhythms and supports circadian research.</p>
+
+  <img src="images/GITracked.png" alt="GI Tracked">
+
+
+  <!-- ======================================================= -->
+  <!-- II. SCANDAGE -->
+  <!-- ======================================================= -->
+
+  <div class="roman">II. Scandage - Infection Detection Wearable</div>
+
+  <p><b>Role:</b> Lead Engineer (Independent Project)</p>
+
+  <p><b>1) Problem / Motivation:</b> Families often miss early signs of infection at home, leading to delayed care.</p>
+
+  <p><b>2) What I Built:</b> A wearable with multimodal sensor input paired with an early machine-learning classifier.</p>
+
+  <p><b>3) Technical Challenges:</b> Sensor calibration and reliable temperature–pressure coupling.</p>
+
+  <p><b>4) Intended Impact:</b> Provides earlier alerts before symptoms escalate.</p>
+
+  <img src="images/Scandage.png" alt="Scandage">
+
+  <h3>Demo</h3>
+  <iframe src="https://player.vimeo.com/video/994382295" allowfullscreen></iframe>
+
+
+  <!-- ======================================================= -->
+  <!-- III. HEADHUSH -->
+  <!-- ======================================================= -->
+
+  <div class="roman">III. HeadHush - Therapeutic Beanie for Migraine Relief</div>
+
+  <p><b>Role:</b> Lead Electrical Engineer (Team Project)</p>
+
+  <p><b>1) Problem / Motivation:</b> Teens often avoid medications for chronic headaches and need discreet relief tools.</p>
+
+  <p><b>2) What I Built:</b> Sensor and conductive textile layer with heat + vibration systems controlled through a mobile app.</p>
+
+  <p><b>3) Technical Challenges:</b> Maintaining even heat distribution and isolating textile resistance.</p>
+
+  <p><b>4) Intended Impact:</b> Drug-free migraine relief that works anywhere.</p>
+
+  <img src="images/headhush.png" alt="HeadHush">
+
+  <h3>Pitch + Demo</h3>
+  <iframe src="https://www.youtube.com/embed/trTDr-PuWMI" allowfullscreen></iframe>
+
+
+  <!-- ======================================================= -->
+  <!-- IV. GRIP HERO V2 -->
+  <!-- ======================================================= -->
+
+  <div class="roman">IV. Grip Hero (v2) - Grip Strength Rehab System</div>
+
+  <p><b>Role:</b> Lead Engineer (Independent Project)</p>
+
+  <p><b>1) Problem / Motivation:</b> My sister has dyspraxia and struggled with commercial grip trainers.</p>
+
+  <p><b>2) What I Built:</b> A redesigned, low-friction load-cell trainer with smoother rails and ergonomic handles.</p>
+
+  <p><b>3) Technical Challenges:</b> Reducing rail friction to stabilize force measurements.</p>
+
+  <p><b>4) Intended Impact:</b> Makes therapy intuitive and fun for young users.</p>
+
+  <img src="images/gripster-demo.gif" alt="Gripster">
+
+  <h3>Explanation + Showcase</h3>
+  <iframe src="https://www.youtube.com/embed/BnT6NPpafI0" allowfullscreen></iframe>
+
+  <h3>Judge Q&A</h3>
+  <iframe src="https://www.youtube.com/embed/a41VFuWzmZk?start=5896&end=6180" allowfullscreen></iframe>
+
+
+  <!-- ======================================================= -->
+  <!-- V. GRIP HERO V1 -->
+  <!-- ======================================================= -->
+
+  <div class="roman">V. Grip Hero (v1) - Assistive Grip Strength Device</div>
+
+  <p><b>Role:</b> Lead Engineer (Independent Project)</p>
+
+  <p><b>1) Purpose:</b> First prototype built for helping my sister build fine-motor strength.</p>
+
+  <p><b>2) Lesson Learned:</b> Discovered that mechanical friction directly distorts sensor accuracy.</p>
 
   <img src="images/griphero.png" alt="Grip Hero">
 
@@ -98,36 +198,17 @@
   <iframe src="https://www.youtube.com/embed/t6d436CZ3Nw" allowfullscreen></iframe>
 
 
-  <!-- =============== -->
-  <!-- 2. Grip Hero v2 -->
-  <!-- =============== -->
+  <!-- ======================================================= -->
+  <!-- VI. AI HAMSCAN -->
+  <!-- ======================================================= -->
 
-  <h2>Grip Hero (v2)</h2>
+  <div class="roman">VI. AI HamScan - At-Home Hamstring Ultrasound and Classifier</div>
 
-  <p>
-    A complete redesign of Grip Hero with smoother rails, better ergonomics, clearer force
-    feedback, and more stable data. Built to make home therapy easier and more fun.
-  </p>
+  <p><b>Role:</b> Lead Engineer (Independent Project)</p>
 
-  <img src="images/gripster-demo.gif" alt="Gripster">
+  <p><b>1) Problem / Motivation:</b> I re-tore my hamstring because I lacked imaging feedback during recovery.</p>
 
-  <h3>Explanation + Showcase (Upload this video to YouTube and send me the link)</h3>
-  <iframe src="https://www.youtube.com/embed/BnT6NPpafI0" allowfullscreen></iframe>
-  <h3>Judge Q&A Section</h3>
-  <iframe src="https://www.youtube.com/embed/a41VFuWzmZk?start=5896&end=6180" allowfullscreen></iframe>
-
-
-
-  <!-- =============== -->
-  <!-- 3. AI HamScan (Ultrasound) -->
-  <!-- =============== -->
-
-  <h2>AI HamScan (At-Home Hamstring Ultrasound & Classifier)</h2>
-
-  <p>
-    After I re-tore my hamstring by returning to hockey too soon, I built a low-cost ultrasound
-    system to monitor injury recovery between clinic visits. This helps athletes heal safely.
-  </p>
+  <p><b>2) What I Built:</b> A low-cost ultrasound probe paired with a classifier to monitor muscle healing.</p>
 
   <img src="images/ultrasound.png" alt="HamScan">
 
@@ -137,101 +218,43 @@
   <h3>Why This Project Matters</h3>
   <iframe src="https://www.youtube.com/embed/hkdqSXms9OA" allowfullscreen></iframe>
 
-  <h3>Presentation + Q&A</h3>
-  <iframe src="https://www.discoveryeducation.co.uk/embed/d6708312-fc38-496a-9fbc-9a51f4d442ea" allowfullscreen></iframe>
 
+  <!-- ======================================================= -->
+  <!-- VII. PRESSURE CAST -->
+  <!-- ======================================================= -->
 
+  <div class="roman">VII. Cast-It - Smart Cast to detect Complications</div>
 
-  <!-- =============== -->
-  <!-- 4. GI Tracked -->
-  <!-- =============== -->
+  <p><b>Role:</b> Lead Electrical Engineer (Team Project)</p>
 
-  <h2>GI Tracked (Wearable Gut and Circadian Rhythm Monitoring)</h2>
+  <p><b>1) Problem / Motivation:</b> Pressure sores under casts are missed because they are invisible.</p>
 
-  <p>
-    A reusable abdominal band that measures gut sounds and temperature overnight using three
-    contact microphones and a thermistor. Built to study digestive rhythms and circadian timing.
-  </p>
-
-  <img src="images/GITracked.png" alt="GI Tracked">
-
-
-
-  <!-- =============== -->
-  <!-- 5. Scandage -->
-  <!-- =============== -->
-
-  <h2>Scandage (At-Home Infection Detection Wearable Device)</h2>
-
-  <p>
-    A sensor + early machine-learning tool designed to help families detect medical patterns
-    earlier, before symptoms escalate.
-  </p>
-
-  <img src="images/Scandage.png" alt="Scandage">
-    <h3>Demo </h3>
-  <iframe src="https://player.vimeo.com/video/994382295" 
-        allow="autoplay; fullscreen; picture-in-picture" allowfullscreen>
-</iframe>
-
-
-
-
-  <!-- =============== -->
-  <!-- 6. Misophonia Aid -->
-  <!-- =============== -->
-
-  <h2>Misophonia Sensory Aid (Work in Progress)</h2>
-
-  <p>
-    A wearable sound-filtering device built for my younger brother, who is sensitive to sudden,
-    triggering frequencies.
-  </p>
-
-  <img src="images/misophonia.png" alt="Misophonia">
-
-
-
-  <!-- =============== -->
-  <!-- 7. HeadHush -->
-  <!-- =============== -->
-
-  <h2>HeadHush (Therapeutic Beanie for Tension Headache Relief)</h2>
-
-  <p>
-    A migraine-relief beanie with heat, vibration, and conductive textiles controlled through
-    a mobile interface. I designed the sensor layer and hardware integration.
-  </p>
-
-  <img src="images/headhush.png" alt="HeadHush">
-
-  <h3>Pitch + Demo </h3>
-  <iframe src="https://www.youtube.com/embed/trTDr-PuWMI" allowfullscreen></iframe>
-
-  <!-- =============== -->
-  <!-- 8. Pressure Sensing Cast -->
-  <!-- =============== -->
-
-  <h2>Pressure-Sensing Cast</h2>
-
-  <p>
-    A cast liner with embedded pressure sensors to detect early pressure sores underneath casts —
-    inspired because both my brothers ended up in casts this year.
-  </p>
+  <p><b>2) What I Built:</b> Sensor placement strategy and internal foam-sensor layering for early detection.</p>
 
   <img src="images/pressurecast.png" alt="Pressure Cast">
 
 
+  <!-- ======================================================= -->
+  <!-- VIII. MISOPHONIA AID -->
+  <!-- ======================================================= -->
 
-  <!-- =============== -->
-  <!-- 9. Junior Breakthrough Challenge -->
-  <!-- =============== -->
+  <div class="roman">VIII. Misophonia Sensory Aid)</div>
 
-  <h2>Junior Breakthrough Challenge</h2>
+  <p><b>Role:</b> Lead Engineer (Independent Project)</p>
 
-  <h3>Submission Video</h3>
+  <p><b>1) Purpose:</b> Helps my younger brother cope with sudden triggering sounds.</p>
+
+  <p><b>2) Concept:</b> Frequency-specific suppression wearable.</p>
+
+  <img src="images/misophonia.png" alt="Misophonia">
+
+
+  <!-- ======================================================= -->
+  <!-- BONUS: BREAKTHROUGH SUBMISSION -->
+  <!-- ======================================================= -->
+
+  <h2>Junior Breakthrough Challenge Submission</h2>
   <iframe src="https://www.youtube.com/embed/eN_sgkGYDqk" allowfullscreen></iframe>
-
 
 </div>
 
