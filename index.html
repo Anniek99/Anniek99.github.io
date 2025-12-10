@@ -98,15 +98,14 @@
 
   <p><b>Role:</b> Lead Engineer (Independent Project)</p>
 
-  <p><b>1) Problem / Motivation:</b> There is no accessible way to monitor gut motility during daily life,
-     even though irregular gut rhythms are linked to digestive disease and disrupted circadian timing.</p>
+  <p><b>1) Problem / Motivation:</b> Gut motility refers to the muscle contractions that move food through the digestive tract, and disorders in this process affect more than 20% of the population and account for over 40% of patients
+    in gastroenterology clinics Current diagnostic tools require invasive procedures, are expensive, and cannot perform continuous at-home monitoring. 
+    The current market lacks wearable systems that integrate acoustic and thermal sensing to monitor gut activity, even though irregular gut rhythms are linked to digestive disease and disrupted circadian timing.</p>
 
-  <p><b>2) What I Built:</b> A reusable abdominal band with three contact microphones and a thermistor connected 
-     to an ESP32-S3 for overnight biosignal logging.</p>
-
-  <p><b>3) Technical Challenges:</b> Motion noise during sleep, reproducible sensor placement, and long-wear comfort.</p>
-
-  <p><b>4) Intended Impact:</b> Enables early detection of abnormal gut rhythms and supports circadian research.</p>
+  <p><b>2) What I Built:</b> A low-cost, reusable wearable device that monitors gut activity and circadian patterns overnight using acoustic and thermal sensing. 
+    There are three piezoelectric contact microphones and one thermistor embedded in an abdominal wrap.</p>
+  
+  <p><b>3) Intended Impact:</b> Enables early detection of abnormal gut rhythms and supports circadian links.</p>
 
   <img src="images/GITracked.png" alt="GI Tracked">
 
@@ -119,13 +118,19 @@
 
   <p><b>Role:</b> Lead Engineer (Independent Project)</p>
 
-  <p><b>1) Problem / Motivation:</b> Families often miss early signs of infection at home, leading to delayed care.</p>
+  <p><b>1) Problem / Motivation:</b>  Bacterial infections are linked to 1 in 8 global deaths. Death from bacterial infection is the 
+    second leading cause of death globally after ischaemic heart disease. Working to reduce this statistic is a global public health priority.
+    One signficiant subset of bacterial infections is surgical site infection (SSI), meaning a bacterial infectino as a common complication from surgery. 
+    While the most draconian scenario is potential death, there are also other issues like signficant discomfort to a patient and high hospitalization and treatment costs. 
+    In a study done across different surgical areas, the highest cohort reporting infection were witnessed in those undergoing abdominal surgery. 
+    Of all the surgeries studied, 16.3% of abdominal surgeries resulted in SSI (other studies put this even higher at 25%).</p>
 
-  <p><b>2) What I Built:</b> A wearable with multimodal sensor input paired with an early machine-learning classifier.</p>
+  <p><b>2) What I Built:</b>  A wearable abdominal bandage wrap with temperature sensors for post-operative abdominal area wound monitoring. 
+    The user or practitioner can login to the interface and press scan. Moments later, the website will inform them of the temperature of the area around the scar based on the average of two sensors on the incision (periwound skin) 
+    versus the the rest of surrounding skin temperature also based on average of 2 sensors at other points on abdomen away from the incision.
+    The interface will also draw a conclusion as to whether you are showing early warning signs of an infection with clear messaging of an early diagnosis</p>
 
-  <p><b>3) Technical Challenges:</b> Sensor calibration and reliable temperature–pressure coupling.</p>
-
-  <p><b>4) Intended Impact:</b> Provides earlier alerts before symptoms escalate.</p>
+  <p><b>3) Intended Impact:</b> Provides earlier alerts before symptoms escalate to potential death.</p>
 
   <img src="images/Scandage.png" alt="Scandage">
 
@@ -141,18 +146,15 @@
 
   <p><b>Role:</b> Lead Electrical Engineer (Team Project)</p>
 
-  <p><b>1) Problem / Motivation:</b> Teens often avoid medications for chronic headaches and need discreet relief tools.</p>
+  <p><b>1) Problem / Motivation:</b> 133,000,000 people in the US suffer from tension headaches and migraines. Many people struggle to relieve headache symptoms, making daily life challenging.</p>
 
-  <p><b>2) What I Built:</b> Sensor and conductive textile layer with heat + vibration systems controlled through a mobile app.</p>
+  <p><b>2) What I Built:</b> HeadHush is a beanie that combines vibration motors and a heating pad to target key pressure points, providing soothing relief for headaches. It can be controlled by either the quick-access conductive
+  touch sensor patches or a locally-hosted web server.
+  </p>
 
-  <p><b>3) Technical Challenges:</b> Maintaining even heat distribution and isolating textile resistance.</p>
-
-  <p><b>4) Intended Impact:</b> Drug-free migraine relief that works anywhere.</p>
+  <p><b>3) Intended Impact:</b> Drug-free headache relief that works anywhere.</p>
 
   <img src="images/headhush.png" alt="HeadHush">
-
-  <h3>Pitch + Demo</h3>
-  <iframe src="https://www.youtube.com/embed/trTDr-PuWMI" allowfullscreen></iframe>
 
 
   <!-- ======================================================= -->
@@ -163,13 +165,11 @@
 
   <p><b>Role:</b> Lead Engineer (Independent Project)</p>
 
-  <p><b>1) Problem / Motivation:</b> My sister has dyspraxia and struggled with commercial grip trainers.</p>
+  <p><b>1) Problem / Motivation:</b> My sister has dyspraxia, causing low muscle tone in her hands and impairs her ability to grip items and manage coordination necessary for functioning in everyday life.</p>
 
-  <p><b>2) What I Built:</b> A redesigned, low-friction load-cell trainer with smoother rails and ergonomic handles.</p>
+  <p><b>2) What I Built:</b> A linear sliding rehab trainer that uses a load-cell with PID feedback to automatically adjust resistance.</p>
 
-  <p><b>3) Technical Challenges:</b> Reducing rail friction to stabilize force measurements.</p>
-
-  <p><b>4) Intended Impact:</b> Makes therapy intuitive and fun for young users.</p>
+  <p><b>4) Intended Impact:</b> Makes therapy fun for young users.</p>
 
   <img src="images/gripster-demo.gif" alt="Gripster">
 
@@ -188,9 +188,10 @@
 
   <p><b>Role:</b> Lead Engineer (Independent Project)</p>
 
-  <p><b>1) Purpose:</b> First prototype built for helping my sister build fine-motor strength.</p>
+  <p><b>1) Purpose:</b> Designed a motorized glove to support children with dyspraxia or low muscle tone. </p>
 
-  <p><b>2) Lesson Learned:</b> Discovered that mechanical friction directly distorts sensor accuracy.</p>
+  <p><b>2) Engineering Outcome:</b> Created a kid-friendly rehabilitation glove that improved grip force from <b>13.4 lbs to 20 lbs</b> using a 
+<b>motorized torque-conversion system, Kevlar tendon cord, and H-bridge-controlled reversible motion.</b></p>
 
   <img src="images/griphero.gif" alt="Grip Hero">
 
@@ -206,9 +207,9 @@
 
   <p><b>Role:</b> Lead Engineer (Independent Project)</p>
 
-  <p><b>1) Problem / Motivation:</b> I re-tore my hamstring because I lacked imaging feedback during recovery.</p>
+  <p><b>1) Problem / Motivation:</b> I re-tore my hamstring because I lacked imaging feedback during recovery and returned to my sport to quickly without knowing if I was fully healed.</p>
 
-  <p><b>2) What I Built:</b> A low-cost ultrasound probe paired with a classifier to monitor muscle healing.</p>
+  <p><b>2) What I Built:</b> An affordable at ultrasound device and detection that can identify and classify hamstring lesions.</p>
 
   <img src="images/ultrasound.png" alt="HamScan">
 
@@ -227,9 +228,10 @@
 
   <p><b>Role:</b> Lead Electrical Engineer (Team Project)</p>
 
-  <p><b>1) Problem / Motivation:</b> Pressure sores under casts are missed because they are invisible.</p>
+  <p><b>1) Problem / Motivation:</b> Casts trap warning signs inside. Pressure injuries and infections can start within hours, and neither the patients or the doctors can see them until it’s too late. 
+    By the time it’s visible, damage is already done.</p>
 
-  <p><b>2) What I Built:</b> Sensor placement strategy and internal foam-sensor layering for early detection.</p>
+  <p><b>2) What I Built:</b> A smart medical multisensor cast that identifies complications in their early stages, to alert the user before the problems become severe.</p>
 
   <img src="images/pressurecast.png" alt="Pressure Cast">
 
@@ -242,11 +244,13 @@
 
   <p><b>Role:</b> Lead Engineer (Independent Project)</p>
 
-  <p><b>1) Purpose:</b> Helps my younger brother cope with sudden triggering sounds.</p>
+  <p><b>1) Purpose:</b> Helps my younger brother cope with sudden triggering sounds. When people with misophonia hear a triggering sound alone, their brain’s emotional centers experience heightened activity, fight or flight response.</p>
 
-  <p><b>2) Concept:</b> Frequency-specific suppression wearable.</p>
+  <p><b>2) Concept: A recent study showed that when the same trigger sound is paired with a positive or neutral visual, the emotional reaction decreases. My device uses this research to help people with sound sensitivity. 
+    It detects and reacts to real-world sounds in the environment. If a triggeringnoise is detected, the device instantly shows a visual of something other than the actual trigger noise that could have potentially caused that 
+    same noise on a small wearable screen.</b> </p>
 
-  <img src="images/misophonia.png" alt="Misophonia">
+  <img src="images/misophonia.png" alt="Misophonia"> 
 
 
   <!-- ======================================================= -->
@@ -254,7 +258,7 @@
 <!-- ======================================================= -->
 <div class="roman">IX. Arduino Booknook - “Esav’s Lentil Stew” (Biblical Narrative)</div>
 
-<p><b>Role:</b> Lead Electrical & Mixed-Media Designer</p>
+<p><b>Role:</b> Lead Electrical & Mixed-Media Designer (Team Project)</p></p>
 
 <p><b>1) Theme:</b> Based on the biblical narrative where Esav trades his birthright for Yaakov’s lentil stew.</p>
 
@@ -280,3 +284,20 @@
 
 </body>
 </html>
+
+  <!-- ======================================================= -->
+  <!-- BONUS 2: SEMINAR LECTURE -->
+  <!-- ======================================================= -->
+
+<h2>Seminar Lecture – At MIT BWSI on The Create Challenge</h2>
+
+<p style="text-align:center;">
+  Invited to present a seminar to all students across the BWSI program with Dr. Hosea Siu, 
+  speaking about engineering design and my experience in the Create Challenge.
+</p>
+
+<iframe 
+  src="https://www.youtube.com/embed/CABCXmMhmog?start=1449&end=1953"
+  allowfullscreen>
+</iframe>
+
