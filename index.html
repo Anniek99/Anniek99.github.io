@@ -57,6 +57,18 @@
       border: 3px solid #cfe9ff;
     }
 
+    /* Process slides have captions, so show them full width */
+    img.wide {
+      width: 100%;
+      max-width: 900px;
+    }
+
+    .hint {
+      font-size: 0.95rem;
+      color: #64748b;
+      margin-top: -8px;
+    }
+
     iframe {
       width: 85%;
       max-width: 800px;
@@ -107,7 +119,14 @@
   
   <p><b>3) Intended Impact:</b> Enables early detection of abnormal gut rhythms and supports circadian links.</p>
 
-  <img src="images/GITracked.png" alt="GI Tracked">
+  <h3>Phase 1: Building the Prototype</h3>
+  <img src="images/GITracked.png" alt="GI Tracked Phase 1 build process">
+
+  <h3>Phase 2: Redesigned for Multi-Participant Testing</h3>
+  <p>I redesigned the circuit as a surface-mount board in KiCad, about 75% smaller than the Phase 1 board, and had identical units
+    commercially assembled so healthy participants and participants with diagnosed motility disorders can each wear one at home for a week.</p>
+  <a href="images/GITracked-phase2.png" target="_blank"><img class="wide" src="images/GITracked-phase2.png" alt="GI Tracked Phase 2: KiCad schematic, PCB layouts, old vs. new board, new garment"></a>
+  <p class="hint">Click the image to view full size.</p>
 
 
   <!-- ======================================================= -->
@@ -233,24 +252,33 @@
 
   <p><b>2) What I Built:</b> A smart medical multisensor cast that identifies complications in their early stages, to alert the user before the problems become severe.</p>
 
-  <img src="images/pressurecast.png" alt="Pressure Cast">
+  <a href="images/pressurecast.png" target="_blank"><img class="wide" src="images/pressurecast.png" alt="Cast-It build process: sensor placement, custom Velostat pressure sensor, 3-channel protoboard, sensors embedded in cast lining"></a>
+  <p class="hint">Click the image to view full size.</p>
 
 
   <!-- ======================================================= -->
-  <!-- VIII. MISOPHONIA AID -->
+  <!-- VIII. MISOPHONIA AID (THERAPHONO) -->
   <!-- ======================================================= -->
 
-  <div class="roman">VIII. Misophonia Sensory Aid</div>
+  <div class="roman">VIII. TheraPhono - Misophonia Sensory Aid</div>
 
-  <p><b>Role:</b> Lead Engineer (Independent Project)</p>
+  <p><b>Role:</b> Lead Engineer (Independent Project, mentored by the Duke Center for Misophonia and Emotion Regulation)</p>
 
   <p><b>1) Purpose:</b> Helps my younger brother cope with sudden triggering sounds. When people with misophonia hear a triggering sound alone, their brain’s emotional centers experience heightened activity, a fight or flight response.</p>
 
-  <p><b>2) Concept:</b> A recent study showed that when the same trigger sound is paired with a positive or neutral visual, the emotional reaction decreases. My device uses this research to help people with sound sensitivity. 
-    It detects and reacts to real-world sounds in the environment. If a triggering noise is detected, the device instantly shows a visual of something other than the actual trigger noise that could have potentially caused that 
-    same noise on a small wearable screen.</b> </p>
+  <p><b>2) Concept:</b> A 2024 study (Mahzouni et al.) found that pairing a trigger sound with a Positive Attributable Visual Source (PAVS), a harmless video
+    that could plausibly have made the same sound, makes the sound feel less unpleasant. For example, wet chewing paired with a video of someone draining a towel.
+    That effect had only been tested in a lab, with no automatic detection. My device turns it into a tool: it listens continuously, detects five trigger sounds,
+    and shows the matching PAVS clip.</p>
 
-  <img src="images/misophonia.png" alt="Misophonia"> 
+  <p><b>3) What I Built:</b> A detector that combines Google's YAMNet audio model with my own trained classifier (0.63 macro F1 on held-out videos, the best of
+    three approaches I tested), running on a Raspberry Pi Compute Module 4 with a USB microphone. My first display prototype is an ST7789 screen; the next version
+    uses XREAL glasses so only the wearer sees the clip.</p>
+
+  <p><b>4) Status:</b> Detector built and tested offline; hardware integration with XREAL glasses underway.</p>
+
+  <a href="images/misophonia.png" target="_blank"><img class="wide" src="images/misophonia.png" alt="TheraPhono: classifier results, Raspberry Pi Compute Module 4 with USB mic, ST7789 display prototype"></a>
+  <p class="hint">Click the image to view full size.</p>
 
 
   <!-- ======================================================= -->
@@ -280,24 +308,24 @@
   <h2>Junior Breakthrough Challenge Submission</h2>
   <iframe src="https://www.youtube.com/embed/eN_sgkGYDqk" allowfullscreen></iframe>
 
-</div>
-
-</body>
-</html>
 
   <!-- ======================================================= -->
   <!-- BONUS 2: SEMINAR LECTURE -->
   <!-- ======================================================= -->
 
-<h2>Seminar Lecture – At MIT BWSI on The Create Challenge</h2>
+  <h2>Seminar Lecture – At MIT BWSI on The Create Challenge</h2>
 
-<p style="text-align:center;">
-  Invited to present a seminar to all students across the BWSI program with Dr. Hosea Siu, 
-  speaking about engineering design and my experience in the Create Challenge.
-</p>
+  <p style="text-align:center;">
+    Invited to present a seminar to all students across the BWSI program with Dr. Hosea Siu, 
+    speaking about engineering design and my experience in the Create Challenge.
+  </p>
 
-<iframe 
-  src="https://www.youtube.com/embed/CABCXmMhmog?start=1449&end=1953"
-  allowfullscreen>
-</iframe>
+  <iframe 
+    src="https://www.youtube.com/embed/CABCXmMhmog?start=1449&end=1953"
+    allowfullscreen>
+  </iframe>
 
+</div>
+
+</body>
+</html>
